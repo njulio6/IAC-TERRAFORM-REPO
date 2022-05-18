@@ -12,3 +12,10 @@ variable "region" {
   description = "region value"
   default     = "us-east-1"
 }
+
+variable "ami_id" {
+    type = string
+    description = "ami id"
+    default = "ami-0022f774911c1d690"
+  
+}
