@@ -14,8 +14,26 @@ variable "region" {
 }
 
 variable "ami_id" {
-    type = string
-    description = "ami id"
-    default = "ami-0022f774911c1d690"
-  
+  type        = string
+  description = "ami id"
+  default     = "ami-0022f774911c1d690"
+
+}
+
+variable "create_instance" {
+  type    = bool
+  default = true
+}
+
+variable "instance_types" {
+  type    = list(any)
+  default = ["t3.micro", "t2.micro", "t2.large"]
+}
+
+variable "pubsub_cidr" {
+  default = "10.0.0.0/24"
+}
+
+variable "privsub_cidr" {
+  default = "10.0.1.0/24"
 }
